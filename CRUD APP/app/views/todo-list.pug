@@ -1,0 +1,12 @@
+each todo in todos
+  div.todo(style={'background-color': todo.important ? 'yellow' : 'none'})
+    div.d-flex.justify-content-between
+      div.d-flex.flex-column.justify-content-center
+        h4(style={'text-decoration': todo.done ? 'line-through' : 'none'}) #{todo.title}
+
+      a.btn.btn-primary(href=`/api/todos/${todo.id}/important`) important
+      a.btn.btn-primary(href=`/api/todos/${todo.id}/complete`) Done
+         
+    hr
+    p #{todo.dueDate} 
+    p #{todo.text}

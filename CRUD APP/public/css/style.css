@@ -1,0 +1,28 @@
+body {
+  background-color: gainsboro;
+  margin: 0;
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+.todo {
+  padding: 10px;
+  border: 3px solid cornflowerblue;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.todo:last-of-type {
+  margin-bottom: 0;
+}
+
+
+.home-list {
+  padding: 15px;
+  border: 3px solid cornflowerblue;
+  flex: 1 0 35%;
+  overflow: auto;
+  min-height: 0;
+  margin: 10px 0;
+}
+

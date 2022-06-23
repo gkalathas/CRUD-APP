@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.h-100.d-flex.flex-column
+    h1= title
+    div.d-flex.justify-content-between.mb-3
+      a.btn.btn-primary(href="/create") Create todo
+    div.d-flex.justify-content-between
+      a.btn.btn-primary(href="/api/todo-filter/all") Show all todos
+      a.btn.btn-primary(href="/api/todo-filter/not-done") Show only not done todos
+      form.d-flex.gap-1(action="/api/test-upload" method="post" enctype="multipart/form-data")
+        input.form-control(type="file" accept="image/png, image/jpeg" name="sampleFile")
+        button.btn.btn-primary Upload
+    div.home-list
+      include todo-list.pug
+    div.d-flex.justify-content-between.mb-3  
+     a.btn.btn-primary(href="/createNote") Create note
+    div.home-list
+      p place notes here
+      include note-list.pug 
+

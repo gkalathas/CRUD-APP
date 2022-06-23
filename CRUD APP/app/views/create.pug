@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  form(action="/api/todos" method="post")
+    div.mb-3
+      label.form-label(for="title") Title
+      input.form-control(type="text" name="title")
+    div.mb-3
+      label.form-label(for="text") Text
+      textarea.form-control(rows="3" cols="5" name="text" maxlength="254") What do I need to do
+    div.mb-3
+      label.form-label(for="dueDate") Text
+      input.form-control(type="date" name="dueDate")
+    input.btn.btn-primary(type="submit" value="Create")

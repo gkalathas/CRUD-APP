@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form(action="/api/notes" method="post")
+    div.mb-3
+      label.form-label(for="text") Text
+      textarea.form-control(rows="3" cols="5" name="text" maxlength="254") Write a note
+    div.mb-3
+    input.btn.btn-primary(type="submit" value="Save")
